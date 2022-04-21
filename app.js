@@ -1,12 +1,16 @@
 const express = require('express');
 const app = express();
 
+
+
 const bodyParser = require('body-parser');
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 
 const db = require('./models/index');
 const serverConfig = require('./config/server.config');
+
+const port = process.env.PORT || serverConfig.PORT;
 
 
 
@@ -55,7 +59,8 @@ require('./routes/category.route')(app);
 require('./routes/product.route')(app);
 require('./routes/auth.route')(app);
 require('./routes/cart.route')(app);
+require('./routes/base.route')(app);
 
-app.listen(serverConfig.PORT, function () {
-    console.log("our app is runing at port : " + serverConfig.PORT)
+app.listen(port, function () {
+    console.log("our app is runing at port : " + port)
 });

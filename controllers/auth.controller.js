@@ -72,3 +72,8 @@ exports.signin = (req,res) => {
         res.status(500).send({message : err.message})
     });
 };
+
+
+exports.homePage = (req, res) => {
+    return res.status(200).send({message : "Welcome to our HomePage"})
+};
