@@ -13,5 +13,21 @@
             "acquire" : 20000,
             "idle" : 10000
         }
+    },
+    
+    "production" : {
+        "database" : "GwSu8aFiCT",
+        "username" : "GwSu8aFiCT",
+        "password" : "GFxzDLyfXQ",
+        "dialectInfo" : {
+            "host" : "remotemysql.com",
+            "dialect" : "mysql"
+        },
+        "pool" : {
+            "max" : 5,
+            "min" : 0,
+            "acquire" : 20000,
+            "idle" : 10000
+        }
     }
 }
